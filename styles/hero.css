@@ -3,6 +3,11 @@ section.hero{
   width: 100%;
   padding: 2.5rem 2rem;
   margin-inline: auto;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  justify-content: space-between;
+
   & h1{
     max-width: 40rem;
   }
@@ -26,7 +31,7 @@ section.hero{
   }
 }
 & h1 span {
-  animation: slideUp 6s infinite ease;
+  animation: slideUp 5s 3s infinite ease;
   display: block;
   
 }
@@ -42,6 +47,7 @@ section.hero{
   transition:350ms;
   
   }
+  
   & .buy {
     padding: 1.5rem 3rem;
     background-color: var(--snitap-sun);
@@ -53,6 +59,7 @@ section.hero{
     display: flex;
   }
 }
+
 .button:hover{
  transform:scale(1.1);
   
@@ -64,6 +71,74 @@ section.hero{
   0 20px 12px rgb(0 0 0/ .05),
   0 36px 15px rgb(0 0 0/.01)
   ;
+  }
+
+ &  div.content :nth-child(2){
+    
+    display: block;
+    width:94%;
+    max-width:20.5rem;
+    height: 20.5rem;
+    left: 3%;
+    transform: translateX(200%);
+    animation: slideIn 3s ease forwards;
+     
+    & .content{
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+    
+    
+    
+  }
+  div.content :nth-child(1){
+    position:absolute;
+    width: 20.5rem;
+    height: 20.5rem;
+    transform: translateX(200%);
+    animation: slideIn 3s 200ms ease forwards;
+    z-index: 1;
+  }
+  
+  div.content :nth-child(3){
+   display: block;
+   position: absolute;
+    width: 3.5rem;
+     height: 3.5rem;
+     z-index: 0;
+     top: 30%;
+     opacity: 0;
+     transform: translateX(400%);
+     animation: slideIn 2s 800ms ease both, appear 100ms 800ms both;
+    
+   }
+   div.content :nth-child(4){
+   display: block;
+    position: absolute;
+   max-width:2.5rem;
+    right: 7%;
+    top: 40%;
+    align-items: center;
+    transform: translateX(400%);
+    animation: slideIn 2.2s 800ms ease both;
+    z-index: 0;
+   }
+  
+@keyframes appear{
+  to{
+    opacity: 1;
+  }
+}
+
+  @keyframes slideIn{
+    50%{
+      transform: translateX(-20px);
+    }
+    
+    100%{
+      transform: translateY(0);
+    }
   }
 
 
