@@ -1,0 +1,141 @@
+section.galery{
+  width:100% ;
+  max-width: 80rem;
+  padding: 2.5rem 2rem;
+  margin-inline:auto ;
+
+  & header.top{
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    
+  }
+  & header.top span{
+    font: 700 var(--text-sm)/1.5 var(--ff-base);
+  }
+  & .container{
+    margin-top: 2rem;
+    display: grid; 
+    gap: 2.5rem;
+    grid-template-areas: "A B B" "C C D";
+    
+    
+  }
+    & figure:nth-child(2){
+      grid-area: B;
+    }
+    & figure:nth-child(3){
+      grid-area: C;
+    }
+    & figure:nth-child(4){
+      grid-area: D;
+    }
+    & figure:nth-child(1){
+      grid-area: A;
+    }
+    
+  }
+    
+&  figure img{
+  border-radius:2.5rem;
+  line-height: 0;
+  overflow: hidden; 
+  object-fit: cover;
+  position: relative;
+  
+}
+& figcaption {
+  display: flex;
+  align-items: center;
+  position:absolute;
+  bottom: -73%;
+  padding: 1.2rem 2rem;
+  font: 500 var(--text-sm) var(--ff-base);
+  color: white;
+  
+ 
+  
+   & > img { 
+    width: 2rem;
+    aspect-ratio: 1.1;
+    object-fit: cover;
+
+  }
+   
+}
+  
+ 
+  
+  
+
+img[src*="images/01.png"]{
+  width: 500px;
+  height: 500px;
+  transition: scale 500ms;
+  animation: animation-apear linear backwards;
+  animation-timeline: view();
+  animation-range: 100px 300px;
+  
+  
+  
+
+}
+img[src*="images/02.png"]{
+  width: 600px;
+  height: 400px;
+  transition: scale 500ms;
+  animation: animation-apear linear backwards;
+  animation-timeline: view();
+  animation-range: 100px 300px;
+  &[data-delay]{
+    animation-range: 150px 300px;
+  }
+  
+}
+img[src*="images/03.png"]{
+  width: 600px;
+  height: 400px;
+  transition: scale 500ms;
+  animation: animation-apear linear backwards;
+  animation-timeline: view();
+  animation-range: 100px 300px;
+
+}
+img[src*="images/04.png"]{
+  width: 500px;
+  height: 500px;
+  transition: scale 500ms;
+  animation: animation-apear linear backwards;
+  animation-timeline: view();
+  animation-range: 100px 300px;
+  &[data-delay]{
+    animation-range: 150px 300px;
+  }
+  
+
+}
+
+img[src*="images/01.png"]:hover{
+  scale: 1.1;
+  transform: translateY(0);
+}
+
+img[src*="images/02.png"]:hover{
+  scale: 1.1;
+  transform: translateY(0);
+}
+img[src*="images/03.png"]:hover{
+  scale: 1.1;
+  transform: translateY(0);
+}
+img[src*="images/04.png"]:hover{
+  scale: 1.1;
+  transform: translateY(0);
+}
+
+@keyframes animation-apear{
+  from{
+    opacity: 0;
+    transform:translateY(100%) ;
+  }
+}

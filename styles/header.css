@@ -1,4 +1,4 @@
-header{
+header {
   max-width: 80rem;
   width: 100%;
   padding: 1.2rem 2rem;
@@ -12,6 +12,7 @@ img{
   width: 2rem;
   height: 2rem;
   transition: transform 500ms;
+  
 }
 img[src*="logo"]:hover{
 transform: rotate(90deg);
